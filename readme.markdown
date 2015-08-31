@@ -1,4 +1,4 @@
-# deterministic-stringify
+# stabilize
 
 This modules is a fork of 
 [substack's json-stable-stringify module](https://github.com/substack/json-stable-stringify),
@@ -12,7 +12,7 @@ You can also pass in a custom comparison function.
 # example
 
 ``` js
-var stringify = require('deterministic-stringify');
+var stringify = require('stabilize');
 var obj = { c: 8, b: [{z:6,y:5,x:4},7], a: 3 };
 console.log(stringify(obj));
 ```
@@ -26,7 +26,7 @@ output:
 # methods
 
 ``` js
-var stringify = require('deterministic-stringify')
+var stringify = require('stabilize')
 ```
 
 ## var str = stringify(obj, opts)
@@ -48,7 +48,7 @@ opts.cmp({ key: akey, value: avalue }, { key: bkey, value: bvalue })
 For example, to sort on the object key names in reverse order you could write:
 
 ``` js
-var stringify = require('deterministic-stringify');
+var stringify = require('stabilize');
 
 var obj = { c: 8, b: [{z:6,y:5,x:4},7], a: 3 };
 var s = stringify(obj, function (a, b) {
@@ -66,7 +66,7 @@ which results in the output string:
 Or if you wanted to sort on the object values in reverse order, you could write:
 
 ```
-var stringify = require('deterministic-stringify');
+var stringify = require('stabilize');
 
 var obj = { d: 6, c: 5, b: [{z:3,y:2,x:1},9], a: 10 };
 var s = stringify(obj, function (a, b) {
@@ -122,7 +122,7 @@ the same as the replacer
 With [npm](https://npmjs.org) do:
 
 ```
-npm install deterministic-stringify
+npm install stabilize
 ```
 
 # license
